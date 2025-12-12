@@ -6,6 +6,7 @@ import { Todo, FilterType } from './types/todo';
 import { AddTodo } from './components/AddTodo';
 import { TodoItem } from './components/TodoItem';
 import { FilterTabs } from './components/FilterTabs';
+import { ThemeToggle } from './components/ThemeToggle';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>(() => {
@@ -62,6 +63,11 @@ function App() {
       </div>
 
       <div className="relative max-w-2xl mx-auto px-4 py-12 sm:py-20">
+        {/* Theme Toggle - Absolute Positioned */}
+        <div className="absolute top-6 right-6 sm:top-10 sm:right-10">
+          <ThemeToggle />
+        </div>
+
         {/* Header */}
         <div className="mb-8 text-center space-y-2">
           <motion.div
